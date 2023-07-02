@@ -15,6 +15,8 @@ if (score === null) {
     };
 }
 
+updateScore();
+
 function pickComputerMove() {
     const randomNumber = Math.random();
 
@@ -81,6 +83,12 @@ function playGame(playerMove) {
 
     localStorage.setItem('score', JSON.stringify(score));
 
-    alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${res}
-Wins: ${score.wins},     Losses: ${score.losses},     Draws: ${score.draws}`);
+    updateScore();
+
+//     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${res}
+// Wins: ${score.wins}, Losses: ${score.losses}, Draws: ${score.draws} `);
+}
+
+function updateScore() {
+    document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Draws: ${score.draws}`;
 }

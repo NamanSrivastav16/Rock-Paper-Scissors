@@ -18,11 +18,15 @@
     <button onclick="playGame('scissors');">
         Scissors
     </button>
+
+    <p class="js-score"></p>
+
     <button onclick="
         score.wins=0;
         score.losses=0;
         score.draws=0;
-        localStorage.removeItem('score')">
+        localStorage.removeItem('score');
+        updateScore();">
         Reset Score
     </button>
     <script src="script.js"></script>
