@@ -1,8 +1,11 @@
-const score = {
-    wins: 0,
-    losses: 0,
-    draws: 0
-};
+// const score = {
+//     wins: 0,
+//     losses: 0,
+//     draws: 0
+// };
+
+// To keep the data after refreshing the page
+const score = JSON.parse(localStorage.getItem('score'));
 
 function pickComputerMove() {
     const randomNumber = Math.random();
@@ -67,6 +70,9 @@ function playGame(playerMove) {
     else if (res === 'Tied') {
         score.draws += 1;
     }
+
+    localStorage.setItem('score', JSON.stringify(score));
+
     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${res}
 Wins: ${score.wins},     Losses: ${score.losses},     Draws: ${score.draws}`);
 }
