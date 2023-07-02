@@ -5,7 +5,15 @@
 // };
 
 // To keep the data after refreshing the page
-const score = JSON.parse(localStorage.getItem('score'));
+let score = JSON.parse(localStorage.getItem('score'));
+
+if (score === null) {
+    score = {
+        wins: 0,
+        losses: 0,
+        draws: 0
+    };
+}
 
 function pickComputerMove() {
     const randomNumber = Math.random();

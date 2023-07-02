@@ -21,7 +21,8 @@
     <button onclick="
         score.wins=0;
         score.losses=0;
-        score.draws=0;">
+        score.draws=0;
+        localStorage.removeItem('score')">
         Reset Score
     </button>
     <script src="script.js"></script>
