@@ -58,7 +58,9 @@
     font-weight: bold;
 }
 
-.reset-button {
+.reset-button,
+.autoPlay,
+.stopAutoPlay {
     background-color: black;
     color: white;
     border: none;
@@ -67,9 +69,17 @@
     padding: 10px;
     font-size: 0.85rem;
     font-weight: 500;
+    margin-right: 10px;
 }
 
 .reset-button:hover {
+    background-color: gray;
+}
+
+.autoPlay:hover {
     background-color: yellowgreen;
-    color: rgb(37, 105, 82);
+}
+
+.stopAutoPlay:hover {
+    background-color: rgb(188, 5, 5);
 }

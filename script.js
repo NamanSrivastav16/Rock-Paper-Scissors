@@ -17,6 +17,29 @@ if (score === null) {
 
 updateScore();
 
+let isautoPlay = false;
+let intervalID;
+function autoPlay() {
+    if (!isautoPlay) {
+        intervalID = setInterval(function () {
+            const playerMove = pickComputerMove();
+            playGame(playerMove);
+        }, 1000);
+        isautoPlay = true;
+    }
+    // else {
+    //     clearInterval(intervalID);
+    //     isautoPlay = false;
+    // }
+}
+
+function stopAutoPlay() {
+    if (isautoPlay) {
+        clearInterval(intervalID);
+        isautoPlay = false;
+    }
+}
+
 function pickComputerMove() {
     const randomNumber = Math.random();
 
