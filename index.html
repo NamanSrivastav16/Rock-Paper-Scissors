@@ -5,30 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p>Rock Paper Scissors</p>
-    <button onclick="playGame('rock');">
-        Rock
-    </button>
-    <button onclick="playGame('paper');">
-        Paper
-    </button>
-    <button onclick="playGame('scissors');">
-        Scissors
-    </button>
 
-    <p class="js-score"></p>
+    <div class="whole-body">
+        <div class="logo">
+        </div>
+        <div class="moves">
+            <p class="head">Rock Paper Scissors</p>
+            <button onclick="playGame('rock');" class="move-button">
+                <img src="img/rock.png" alt="Rock" class="move-img">
+            </button>
+            <button onclick="playGame('paper');" class="move-button">
+                <img src="img/paper.png" alt="Paper" class="move-img">
+            </button>
+            <button onclick="playGame('scissors');" class="move-button">
+                <img src="img/scissors.png" alt="Scissors" class="move-img">
+            </button>
 
-    <button onclick="
-        score.wins=0;
-        score.losses=0;
-        score.draws=0;
-        localStorage.removeItem('score');
-        updateScore();">
-        Reset Score
-    </button>
+            <p class="js-result result"></p>
+            <p class="js-moves result-img"></p>
+            <p class="js-score final-score"></p>
+
+            <button onclick="
+                score.wins=0;
+                score.losses=0;
+                score.draws=0;
+                localStorage.removeItem('score');
+                updateScore();" class="reset-button">
+                Reset Score
+            </button>
+        </div>
+        <div class="rules">
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 

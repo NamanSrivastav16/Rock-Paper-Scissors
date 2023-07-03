@@ -84,9 +84,12 @@ function playGame(playerMove) {
     localStorage.setItem('score', JSON.stringify(score));
 
     updateScore();
+    document.querySelector('.js-result').innerHTML = res;
+    document.querySelector('.js-moves').innerHTML = `<p class="choices">Your Choice <img src="img/${playerMove}.png" alt="rock" class="move-img">
+    Computer's Choice <img src="img/${computerMove}.png" alt="rock" class="move-img"></p>`;
 
-//     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${res}
-// Wins: ${score.wins}, Losses: ${score.losses}, Draws: ${score.draws} `);
+    //     alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${res}
+    // Wins: ${score.wins}, Losses: ${score.losses}, Draws: ${score.draws} `);
 }
 
 function updateScore() {
