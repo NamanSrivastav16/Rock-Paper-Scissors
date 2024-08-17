@@ -6,7 +6,7 @@ Next, I implemented the game logic using JavaScript. I assigned click event list
 
 Overall, the Rock Paper Scissors game made with HTML, CSS, and JavaScript provides an engaging and interactive experience for users to play against the computer and enjoy the classic game.
 
-Link : https://the-arti5t.github.io/Rock-Paper-Scissors/
+Link : https://namansrivastav16.github.io/Rock-Paper-Scissors/
 
 ![new](https://github.com/THE-ARTI5T/Rock-Paper-Scissors/assets/103200040/e09429f0-be40-447d-8fe4-c401797b25b2)
 
